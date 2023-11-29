@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD con LocalStorage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>CRUD con LocalStorage</h1>
+        <nav>
+            <a href="#" id="home-link" class="selected">Inicio</a>
+            <a href="#" id="crud-link">CRUD</a>
+            <a href="#" id="html5-link">Herramientas</a>
+        </nav>
+    </header>
+
+<main>       
+
+<section id="home-content" class="container">
+    <!-- Título de la sección -->
+    <h2>Bienvenidos</h2>
+    <!-- Primer video -->
+    <div class="video-item">
+        <h3>Curso Básico de HTML5</h3>
+        <div class="video-container">
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/eesyGnJwfAY" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+    <!-- Separación entre videos --> 
+     <hr>
+    <!-- Segundo video -->
+    <div class="video-item">
+        <h3>Cómo utilizar localStorage en Javascript?</h3>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/7hR7oTpDukc" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</section>
+
+
+        <section id="crud-content" class="container" style="display: none;">
+            <!-- Contenido de CRUD -->
+            <h2>CRUD Desarrollado</h2>
+         
+             <form id="crud-form">
+            <label for="task">Tarea:</label>
+            <input type="text" id="task" required>
+
+            <label for="description">Descripción:</label>
+            <textarea id="description" required></textarea>
+
+            <label for="dueDate">Fecha de Vencimiento:</label>
+            <input type="date" id="dueDate" required>
+
+           <!-- Contenedor para los botones -->
+            <div class="buttons-container">
+                <!-- Botón para registrar tarea -->
+                <button type="submit" class="register-btn">Agregar</button>
+
+                <!-- Botón para limpiar datos -->
+                <button type="button" id="clearDataBtn" class="clear-data-btn">Limpiar Datos</button>
+            </div>
+
+        </form>
+
+        <!-- Nuevo formulario para editar -->
+        <form id="edit-form" style="display: none;">
+            <label for="editedTask">Tarea:</label>
+            <input type="text" id="editedTask" required>
+
+            <label for="editedDescription">Descripción:</label>
+            <textarea id="editedDescription" required></textarea>
+
+            <label for="editedDueDate">Fecha de Vencimiento:</label>
+            <input type="date" id="editedDueDate">
+
+            <!-- Botón para guardar la edición -->
+            <button type="button" id="saveEditBtn">Guardar</button>
+
+        </form>
+
+        <div id="task-list"></div>
+          </section>
+
+ <section id="html5-content" class="container" style="display: none;">
+    <!-- Contenido de Etiquetas HTML5 -->
+    <h2>De Interés</h2>
+
+    <a href="https://www.html6.es/t1_estructura.html" target="_blank" class="button-link">Estructura básica de una página en HTML5</a>
+
+    <a href="https://brandominus.com/blog/creatividad/todas-etiquetas-html5/" target="_blank" class="button-link">¿Quieres saber todas las etiquetas de HTML 5 que existen?</a>
+
+    <a href="https://www.freecodecamp.org/espanol/news/el-dom-de-javascript-un-tutorial-practico/" target="_blank" class="button-link">Cómo funciona el DOM de JavaScript</a>
+
+    <a href="https://blog.logrocket.com/localstorage-javascript-complete-guide/" target="_blank" class="button-link">localStorage in JavaScript</a>
+</section>
+
+    </main>
+
+    <footer>
+        <h5>Uso de la API de localstorage como medio para persistir los datos y manipulando el DOM con JS</h5>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
